@@ -6,3 +6,24 @@ Medium Blue: rgba(16, 108, 151, 0.7)
 Dark Blue: rgba(16, 108, 151, 0.9)
 
 */ 
+
+/* reset browser sizing added on load*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* project wide font definitions to be inherited */
+body {
+    font-family: "Source Code Pro", monospace;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #777;
+}
+
+.header {
+    height: 95vh;
+    /* background-image:  */
+}
