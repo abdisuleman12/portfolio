@@ -25,13 +25,39 @@ body {
 }
 
 .header {
+    position: relative;
     height: 95vh;
     background-image: 
-    /* linear-gradient(to right bottom, 
+    linear-gradient(to right bottom, 
     rgba(16, 108, 151, 0.4), 
-    rgba(10, 90, 128, 0.9) ),  */
-    url(../img/donald-glover.jpg);
+    rgba(10, 90, 128, 0.9) ), 
+    url(../img/plain-blue-background.jpg);
     background-size: cover;
     background-position: top;
-    clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%)
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+}
+
+.text-box {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.heading-primary {
+    color: #fff;
+    text-transform: uppercase
+}
+
+.heading-primary-main {
+    display: block;
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.heading-primary-sub {
+    display: block;
+    font-size: 20px;
+    font-weight: 300;
 }
