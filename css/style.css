@@ -1,20 +1,6 @@
 /*
 COLORS:
 */
-.header {
-  position: relative;
-  height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(20, 140, 196, 0.4), rgba(11, 77, 107, 0.9)), url(../img/plain-blue-background.jpg);
-  background-size: cover;
-  background-position: top;
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
-  .header__text-box {
-    position: absolute;
-    top: 48%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center; }
-
 /* reset browser sizing added on load*/
 *,
 *::after,
@@ -28,11 +14,6 @@ html {
 
 /* project wide font definitions to be inherited */
 body {
-  font-family: "Source Code Pro", monospace;
-  font-weight: 400;
-  line-height: 1.7;
-  color: #777;
-  padding: 3rem;
   box-sizing: border-box; }
 
 @keyframes moveInLeft {
@@ -63,6 +44,14 @@ body {
     opacity: 1;
     transform: translate(0); } }
 
+/* project wide font definitions to be inherited */
+body {
+  font-family: "Source Code Pro", monospace;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #777;
+  padding: 3rem; }
+
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
@@ -87,20 +76,20 @@ body {
     animation-duration: 1.3s;
     animation-timing-function: ease-out; }
 
-div.links {
+.links {
   margin-top: 1.8rem; }
-  div.links a.links-one {
+  .links a.links-one {
     text-decoration: none; }
-    div.links a.links-one img.link-one {
+    .links a.links-one img.link-one {
       min-height: 25px;
       max-height: 25px;
       max-width: 25px;
       display: inline-block;
       animation: moveInBottom 1.2s ease-in;
       padding-bottom: 3px; }
-  div.links a.links-two {
+  .links a.links-two {
     text-decoration: none; }
-    div.links a.links-two img.link-two {
+    .links a.links-two img.link-two {
       min-height: 28px;
       max-height: 25px;
       max-width: 28px;
@@ -151,3 +140,17 @@ div.links {
 .btn--animated {
   animation: moveInBottom .5s ease-out .75s;
   animation-fill-mode: backwards; }
+
+.header {
+  position: relative;
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(20, 140, 196, 0.4), rgba(11, 77, 107, 0.9)), url(../img/plain-blue-background.jpg);
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
+  .header__text-box {
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
