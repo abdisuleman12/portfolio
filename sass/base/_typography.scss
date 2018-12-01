@@ -1,0 +1,60 @@
+.heading-primary {
+    color: $color-white;
+    text-transform: uppercase;
+
+    backface-visibility: hidden;
+    margin-bottom: 3rem;
+
+    &--main {
+        display: block;
+        font-size: 5rem;
+        font-weight: 700;
+        letter-spacing: .75rem;
+    
+        animation-name: moveInLeft;
+        animation-duration: 1.3s;
+        animation-timing-function: ease-out;
+        
+        /* animation-iteration-count: 3; */
+        /* animation-delay: 3s; */
+    
+    }
+
+    &--sub {
+        display: block;
+        font-size: 2rem;
+        font-weight: 300;
+        letter-spacing: .3rem;
+    
+        animation-name: moveInRight;
+        animation-duration: 1.3s;
+        animation-timing-function: ease-out;
+    }
+}
+
+div.links {
+    margin-top: 1.8rem;
+
+    & a.links-one {
+        text-decoration: none;
+        & img.link-one {
+            min-height: 25px;
+            max-height: 25px;
+            max-width: 25px;
+            display: inline-block;
+            animation: moveInBottom 1.2s ease-in;
+            padding-bottom: 3px
+        } 
+    }
+
+    & a.links-two {
+        text-decoration: none;
+        & img.link-two {
+            min-height: 28px;
+            max-height: 25px;
+            max-width: 28px;
+            display: inline-block;
+            animation: moveInBottom 1.2s ease-in;
+        }
+    }
+}
