@@ -1,28 +1,6 @@
 /*
 COLORS:
-
-Light Blue: rgba(16, 108, 151, 0.4)
-Medium Blue: rgba(16, 108, 151, 0.7)
-Dark Blue: rgba(16, 108, 151, 0.9)
-
 */
-/* reset browser sizing added on load*/
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box; }
-
-html {
-  font-size: 10px; }
-
-/* project wide font definitions to be inherited */
-body {
-  font-family: "Source Code Pro", monospace;
-  font-weight: 400;
-  line-height: 1.7;
-  color: #777;
-  padding: 3rem; }
-
 .header {
   position: relative;
   height: 95vh;
@@ -30,57 +8,32 @@ body {
   background-size: cover;
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
+  .header__text-box {
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
 
-.header__text-box {
-  position: absolute;
-  top: 48%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center; }
+/* reset browser sizing added on load*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
 
-.links {
-  margin-top: 1.8rem; }
+html {
+  font-size: 62.5%; }
 
-.link-one {
-  min-height: 25px;
-  max-height: 25px;
-  max-width: 25px;
-  display: inline-block;
-  animation: moveInBottom 1.2s ease-in;
-  padding-bottom: 3px; }
-
-.link-two {
-  min-height: 28px;
-  max-height: 25px;
-  max-width: 28px;
-  display: inline-block;
-  animation: moveInBottom 1.2s ease-in; }
-
-.heading-primary {
-  color: #fff;
-  text-transform: uppercase;
-  backface-visibility: hidden;
-  margin-bottom: 3rem; }
-
-.heading-primary--main {
-  display: block;
-  font-size: 5rem;
-  font-weight: 700;
-  letter-spacing: .75rem;
-  animation-name: moveInLeft;
-  animation-duration: 1.3s;
-  animation-timing-function: ease-out;
-  /* animation-iteration-count: 3; */
-  /* animation-delay: 3s; */ }
-
-.heading-primary--sub {
-  display: block;
-  font-size: 2rem;
-  font-weight: 300;
-  letter-spacing: .3rem;
-  animation-name: moveInRight;
-  animation-duration: 1.3s;
-  animation-timing-function: ease-out; }
+/* project wide font definitions to be inherited */
+body {
+  font-family: "Source Code Pro", monospace;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #777;
+  padding: 3rem;
+  box-sizing: border-box; }
 
 @keyframes moveInLeft {
   0% {
@@ -110,18 +63,52 @@ body {
     opacity: 1;
     transform: translate(0); } }
 
-.btn:link,
-.btn:visited {
+.heading-primary {
+  color: #fff;
   text-transform: uppercase;
-  text-decoration: none;
-  padding: 1.5rem 4rem;
-  display: inline-block;
-  border-radius: 100rem;
-  transition: all .2s;
-  position: relative; }
+  backface-visibility: hidden;
+  margin-bottom: 3rem; }
+  .heading-primary--main {
+    display: block;
+    font-size: 5rem;
+    font-weight: 700;
+    letter-spacing: .75rem;
+    animation-name: moveInLeft;
+    animation-duration: 1.3s;
+    animation-timing-function: ease-out;
+    /* animation-iteration-count: 3; */
+    /* animation-delay: 3s; */ }
+  .heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: .3rem;
+    animation-name: moveInRight;
+    animation-duration: 1.3s;
+    animation-timing-function: ease-out; }
+
+div.links {
+  margin-top: 1.8rem; }
+  div.links a.links-one {
+    text-decoration: none; }
+    div.links a.links-one img.link-one {
+      min-height: 25px;
+      max-height: 25px;
+      max-width: 25px;
+      display: inline-block;
+      animation: moveInBottom 1.2s ease-in;
+      padding-bottom: 3px; }
+  div.links a.links-two {
+    text-decoration: none; }
+    div.links a.links-two img.link-two {
+      min-height: 28px;
+      max-height: 25px;
+      max-width: 28px;
+      display: inline-block;
+      animation: moveInBottom 1.2s ease-in; }
 
 .btn:link,
-.btn:visited {
+.btn .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
   padding: 1.5rem 4rem;
@@ -135,6 +122,9 @@ body {
 .btn:hover {
   transform: translateY(-0.5rem);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+  .btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0; }
 
 .btn:active {
   transform: translateY(-1px);
@@ -143,6 +133,8 @@ body {
 .btn--white {
   background-color: #fff;
   color: #777; }
+  .btn--white::after {
+    background-color: #fff; }
 
 .btn::after {
   content: "";
@@ -155,13 +147,6 @@ body {
   left: 0;
   z-index: -1;
   transition: all .4s; }
-
-.btn-white::after {
-  background-color: #fff; }
-
-.btn:hover::after {
-  transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0; }
 
 .btn--animated {
   animation: moveInBottom .5s ease-out .75s;
