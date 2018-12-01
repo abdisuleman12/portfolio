@@ -1,3 +1,13 @@
+/* project wide font definitions to be inherited */
+body {
+    font-family: "Source Code Pro", monospace;
+    font-weight: 400;
+    // font-size: 16px;
+    line-height: 1.7;
+    color: $color-grey-dark;
+    padding: 3rem;
+}
+
 .heading-primary {
     color: $color-white;
     text-transform: uppercase;
@@ -32,7 +42,7 @@
     }
 }
 
-div.links {
+.links {
     margin-top: 1.8rem;
 
     & a.links-one {
