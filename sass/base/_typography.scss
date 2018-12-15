@@ -78,6 +78,10 @@ body {
     -webkit-background-clip: text;
     color: transparent;
     letter-spacing: 2px;
+
+    &-projects {
+        color: $color-white;
+    }
 }
 
 .heading-tertiary {
