@@ -9,7 +9,13 @@
     background-image: 
     linear-gradient(to right bottom, 
     rgba($color-primary-light, 0.4), 
-    rgba($color-primary-dark, 0.9) ), 
-    ;
+    rgba($color-primary-dark, 0.9) );
     background-size: cover;
+    margin-top: -10rem;
+
+    transform: skewY(-7deg);
+
+    & > * {
+        transform: skewY(7deg);
+    }
 }
