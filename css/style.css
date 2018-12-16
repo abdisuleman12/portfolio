@@ -222,7 +222,7 @@ body {
 .project-box {
   background-color: rgba(255, 255, 255, 0.8);
   font-size: 1.5rem;
-  padding: 2rem;
+  padding: 2.5rem;
   text-align: center;
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
@@ -250,6 +250,31 @@ body {
         display: inline-block; }
   .project-box:hover {
     transform: translateY(-1.5rem) scale(1.03); }
+
+.recommendation {
+  width: 75vw;
+  margin: 0 auto;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 3px;
+  padding: 6rem;
+  padding-left: 9rem;
+  font-size: 1.6rem;
+  transform: skewX(-12deg); }
+  .recommendation__shape {
+    width: 15rem;
+    height: 15rem;
+    float: left;
+    shape-outside: circle(50% at 50% 50%);
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    -webkit-clip-path: circle(50% at 50% 50%);
+    transform: translateX(-3rem) skewX(12deg); }
+  .recommendation__image {
+    height: 100%; }
+  .recommendation__text {
+    font-size: 1.5rem;
+    transform: skewX(12deg); }
 
 .header {
   position: relative;
@@ -304,3 +329,8 @@ body {
   transform: skewY(-7deg); }
   .section-projects > * {
     transform: skewY(7deg); }
+
+.section-recommendations {
+  background-color: #f7f7f7;
+  padding: 20rem 0;
+  margin-top: -10rem; }
