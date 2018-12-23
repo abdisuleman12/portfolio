@@ -34,7 +34,11 @@
 
     &__text {
         font-size: 1.4rem;
-        // transform: skewX(12deg);
+        // transform: skewX(12deg); 
+
+        & .linkedin-logo {
+            max-height: 2rem;  
+        }
     }
 
     &__caption {
