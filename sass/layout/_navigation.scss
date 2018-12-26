@@ -13,6 +13,7 @@
         right: 6rem;
         border-radius: 50%;
         z-index: 2000;
+        box-shadow: 0 1rem 3rem rgba($color-black, .1)
     }
 
     &__background {
@@ -26,8 +27,9 @@
             $color-primary-light, $color-primary-dark
         );
         z-index: 1000;
+        transition: transform .8s cubic-bezier(.86, 0, 0.07, 1);
 
-        transform: scale(60);
+        // transform: scale(60);
     }
 
     &__nav {
@@ -37,6 +39,10 @@
         top: 0;
         right: 0;
         z-index: 1500;
+
+        opacity: 0;
+        width: 0;
+        transition: all .8s;
     }
 
     &__list {
@@ -46,6 +52,7 @@
         transform: translate(-50%, -50%);
         list-style: none;
         text-align: center;
+        width: 100%;
     }
 
     &__item {
@@ -66,10 +73,10 @@
         background-size: 240%;
         transition: all .4s;
 
-        span {
-            margin-right: 1rem;
-            display: inline-block;
-        }
+            span {
+                margin-right: 1rem;
+                display: inline-block;
+            }
         }
 
         &:hover,
@@ -78,5 +85,13 @@
             color: $color-primary;
             transform: translateX(1rem)
         }
+    }
+
+    &__checkbox:checked ~ &__background {
+        transform: scale(80)
+    }
+    &__checkbox:checked ~ &__nav {
+        opacity: 1;
+        width: 100%;
     }
 }
