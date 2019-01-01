@@ -248,13 +248,15 @@ body {
       top: -2rem; }
       @media (max-width: 56.25em) {
         .composition__photo--p1 {
-          top: 0; } }
+          top: 1rem;
+          transform: scale(1.2); } }
     .composition__photo--p2 {
       right: 0;
       top: 15rem; }
       @media (max-width: 56.25em) {
         .composition__photo--p2 {
-          top: 0; } }
+          top: -1rem;
+          transform: scale(1.2); } }
     .composition__photo:hover {
       transform: scale(1.05);
       box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
@@ -266,38 +268,38 @@ body {
   background-color: rgba(255, 255, 255, 0.8);
   font-size: 1.5rem;
   padding: 2.5rem;
-  min-height: 60rem;
-  max-height: 61rem;
+  height: 100%;
   text-align: center;
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
   transition: transform .3s; }
+  @media (max-width: 56.25em) {
+    .project-box {
+      padding: 2rem; } }
   .project-box__image {
     width: 100%;
     border-radius: 4px;
     min-height: 12rem; }
-  .project-box__links {
+  .project-box__text .team-link {
+    text-decoration: none;
+    color: #0b4d6b; }
+  .project-box__text__links {
     padding: 1rem; }
-    .project-box__links__icon {
+    .project-box__text__links__icon {
       display: inline-block;
       text-decoration: none; }
-      .project-box__links__icon--1 {
+      .project-box__text__links__icon--1 {
         color: transparent;
         -webkit-background-clip: text;
         background-image: linear-gradient(to right, #148cc4, #0b4d6b);
         font-size: 4rem;
         display: inline-block; }
-      .project-box__links__icon--2 {
+      .project-box__text__links__icon--2 {
         color: transparent;
         -webkit-background-clip: text;
         background-image: linear-gradient(to right, #148cc4, #0b4d6b);
         font-size: 4rem;
         display: inline-block; }
-  .project-box__text {
-    min-height: 25rem; }
-    .project-box__text .team-link {
-      text-decoration: none;
-      color: #0b4d6b; }
   .project-box:hover {
     transform: translateY(-1.5rem) scale(1.03); }
 
